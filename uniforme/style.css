@@ -1,0 +1,130 @@
+
+
+
+
+body{ 
+    background-color: rgb(7, 16, 58);
+}
+
+header {
+color: aliceblue;
+display: flex;
+
+}
+
+#logo {
+height: 100px;
+}
+
+section {
+    display: flex;
+}
+.bert { 
+color: aliceblue;
+height: 300px;
+font-size: 50px;
+}
+
+.bert1 {
+    height: 200px;
+background-color: azure;
+}
+
+.bert2 {
+    
+    
+}
+.bert3 {
+background-color: aliceblue;
+
+}
+.bert4 {
+background-color: crimson;
+
+}
+
+.bert5 {
+    background-color: blue;
+}
+button {
+
+    background-color: #FF69B4; /* Cor de fundo rosa */
+    border: none;
+    color: white;
+    padding: 20px 30px; /* Espaçamento interno */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px; /* Borda arredondada */
+    transition-duration: 0.4s; /* Suaviza a transição */
+}
+footer {
+    background-color: chartreuse;
+    text-align: center;
+}
+
+.btn {
+    background-color: #FF69B4; /* Cor de fundo rosa */
+    border: none;
+    color: white;
+    padding: 20px 30px; /* Espaçamento interno */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px; /* Borda arredondada */
+    transition-duration: 0.4s; /* Suaviza a transição */
+}
+
+.btn:hover {
+    background-color: #ec60ab; /* Cor de fundo rosa mais escura quando hover */
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+header, footer {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #f2f2f2;
+}
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.center {
+    text-align: center;
+}
+.bert3, .bert4, .bert5 {
+    margin-bottom: 20px;
+}
+.auth-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.auth-buttons > div {
+    margin: 0 10px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.decoration-box {
+    border: 1px solid black;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+}
