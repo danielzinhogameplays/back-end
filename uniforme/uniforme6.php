@@ -10,23 +10,22 @@ if ($conexao->connect_error) {
 if (isset($_POST['nome']) && isset($_POST['sala'])) {
     $nome = $_POST['nome'];
     $sala = $_POST['sala'];
+
+    // Inserção no banco de dados
+    $sql = "INSERT INTO Alunos (nome, sala) VALUES ('$nome', '$sala')";
+
+    if ($conexao->query($sql) === TRUE) {
+        // Redireciona para uniforme61.php com mensagem de sucesso
+        header("Location: uniforme61.php?success=1");
+        exit; // Finaliza o script após redirecionar
+    } else {
+        echo "Erro ao cadastrar o usuário: " . $conexao->error;
+    }
 } else {
     echo "Erro: Dados do formulário não enviados corretamente.";
 }
 
-
-    // Se o e-mail não existir, prosseguir com a inserção
-    $sql = "INSERT INTO Alunos (nome, sala) VALUES ('$nome', '$sala')";
-
-    if ($conexao->query($sql) === TRUE) {
-        echo "Usuário cadastrado com sucesso!";
-    } else {
-        echo "Erro ao cadastrar o usuário: " . $conexao->error;
-    }
-
-$conexao->close();
-
-    
+$conexao->close(); 
 ?>
 
 <!DOCTYPE html>
@@ -34,12 +33,12 @@ $conexao->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Conta - UniForme</title>
+    <title>Cadastrar Aluno - UniForme</title>
     <link rel="stylesheet" href="style3.css">
 </head>
 <body>
     <header>
-        <h1>Criar Conta</h1>
+        <h1>Cadastrar Aluno</h1>
     </header>
     <main>
         <div class="container">
@@ -54,7 +53,6 @@ $conexao->close();
                         <label for="sala">Sala:</label>
                         <input type="text" id="sala" name="sala" required>
                     </div>
-                    
                     <button type="submit">Cadastrar</button>
                 </form>
             </div>
